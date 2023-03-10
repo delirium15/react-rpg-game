@@ -1,5 +1,9 @@
+body {
+  background-color: #9ca3af;
+}
 .game-menu {
   width: 250px;
+  background: red;
 }
 .game-menu a.active {
   background-color: #efefef;

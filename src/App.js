@@ -1,12 +1,11 @@
-import logo from "./logo.svg"
 import "./App.css"
 import { Route, Routes } from "react-router-dom"
 import Layout from "./components/pages/Layout"
 import PlayGame from "./components/pages/PlayGame"
-import EditCharacter from "./components/pages/EditCharacter"
-import SaveLoadCharacter from "./components/pages/SaveLoadCharacter"
+import EditHero from "./components/pages/EditHero"
+import SaveLoadHero from "./components/pages/SaveLoadHero"
 
-function App() {
+function App(props) {
   return (
     <Routes>
       <Route
@@ -19,11 +18,11 @@ function App() {
         />
         <Route
           path="/edit-character"
-          element={<EditCharacter />}
+          element={<EditHero />}
         />
         <Route
           path="/save-load-character"
-          element={<SaveLoadCharacter />}
+          element={<SaveLoadHero />}
         />
 
         {/* Using path="*"" means "match anything", so this route
