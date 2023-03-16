@@ -5,30 +5,11 @@ import reportWebVitals from "./reportWebVitals"
 import { BrowserRouter } from "react-router-dom"
 import { createStore } from "redux"
 import { Provider } from "react-redux"
+import heroReducer from "./reducers/heroReducer"
 
 import "./index.css"
 
-const initialState = {
-  count: 4333,
-}
-
-function reducer(state = initialState, action) {
-  switch (action.type) {
-    case "INCREMENT":
-      return {
-        count: state.count + 1,
-      }
-    case "DECREMENT":
-      return {
-        count: state.count - 1,
-      }
-    default:
-      return state
-  }
-  return state
-}
-
-const store = createStore(reducer)
+const store = createStore(heroReducer)
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
